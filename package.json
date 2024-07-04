@@ -1,0 +1,9 @@
+{
+  "name": "@neongamerbot/credits",
+  "version": "0.0.1",
+  "description": "Credits for my code ",
+  "main": "index.js",
+  "author": "Saahil <neon@saahild.com>",
+  "license": "UNC",
+  "private": false
+}
