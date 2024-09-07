@@ -15,7 +15,7 @@ jobs:
             node-version: "20"
         - uses: JS-DevTools/npm-publish@v3
           with:
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.MY_TOKEN }}
             registry: "https://npm.pkg.github.com"
     # publish-npm:
     #   runs-on: ubuntu-latest
