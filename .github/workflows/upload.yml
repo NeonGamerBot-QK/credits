@@ -13,6 +13,8 @@ jobs:
         - uses: JS-DevTools/npm-publish@v3
           with:
             token: ${{ secrets.MY_TOKEN }}
+            access: public
+            provenance: true
             registry: "https://npm.pkg.github.com"
     publish-npm:
       runs-on: ubuntu-latest
