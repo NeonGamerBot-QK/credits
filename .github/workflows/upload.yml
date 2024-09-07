@@ -16,6 +16,7 @@ jobs:
           registry: "https://npm.pkg.github.com"
   publish-npm:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4
       - uses: JS-DevTools/npm-publish@v3
