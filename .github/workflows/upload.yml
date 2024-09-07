@@ -22,4 +22,5 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
+          registry: "https://registry.npmjs.org/"
           provenance: true

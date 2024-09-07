@@ -5,5 +5,7 @@
   "main": "index.js",
   "author": "Saahil <neon@saahild.com>",
   "license": "UNC",
-  "private": false
+  "private": false,
+  "repository":"https://github.com/NeonGamerBot-QK/credits"
+
 }
