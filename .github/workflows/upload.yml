@@ -3,6 +3,7 @@ on:
     branches: main
 
 jobs:
+<<<<<<< HEAD
     publish-git:
       runs-on: ubuntu-latest
       permissions: write-all
@@ -23,3 +24,25 @@ jobs:
             token: ${{ secrets.NPM_TOKEN }}
             access: public
             provenance: true
+=======
+  publish-git:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # allow GITHUB_TOKEN to publish packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.MY_TOKEN }}
+          access: public
+          provenance: true
+          registry: "https://npm.pkg.github.com"
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+>>>>>>> refs/remotes/origin/main
