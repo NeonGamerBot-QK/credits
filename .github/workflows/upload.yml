@@ -3,23 +3,23 @@ on:
     branches: main
 
 jobs:
-    publish-git:
-      runs-on: ubuntu-latest
-      permissions: write-all
-      steps:
-        - uses: actions/checkout@v4
-        - uses: JS-DevTools/npm-publish@v3
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            access: public
-            provenance: true
-            registry: "https://npm.pkg.github.com"
-    publish-npm:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: JS-DevTools/npm-publish@v3
-          with:
-            token: ${{ secrets.NPM_TOKEN }}
-            access: public
-            provenance: true
+  publish-git:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          access: public
+          provenance: true
+          registry: "https://npm.pkg.github.com"
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+          provenance: true
